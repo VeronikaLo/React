@@ -1,5 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Card from './components/Card/Card'
+
 
 function App() {
   return (
@@ -7,6 +9,8 @@ function App() {
       <header className="App-header">
         <h1>English words</h1>
       </header>
+
+      <Card></Card>
     </div>
   );
 }

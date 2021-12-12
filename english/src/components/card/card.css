@@ -1,0 +1,33 @@
+.card{
+    
+    background-color: beige;
+    width: 500px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 2px  2px 3px rgb(184, 181, 181);
+    padding:0;
+    margin: 20px, 0;
+}
+
+
+.card__header{
+    height: 50px;
+    align-self: start ;
+    width:100%;
+    background-color: rgb(146, 240, 230);
+    border-radius: 20px 20px 0px 0px;
+   
+}
+
+.card__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 1px 2px grey;
+    font-size: 20px;
+}
+
+.card__body p{
+    margin: 8px 0;
+}
