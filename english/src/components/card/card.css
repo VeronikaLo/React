@@ -31,3 +31,8 @@
 .card__body p{
     margin: 8px 0;
 }
+
+.buttons{
+    display: flex;
+    
+}

@@ -8,8 +8,8 @@ function Card(props) {
 
 
     return(
-        <div className={"test" + (isSelected? "selected":"")}>
-        <div className="card">
+        
+        <div className={"card " + (isSelected&& "selected")}>
          <p className="card-title">{ tarif }</p>
          <p className="card-price"><span>руб</span> { price } <span>/мес</span></p>
          <p className="card-volume">До { volume } Мбит/сек</p>
@@ -18,7 +18,7 @@ function Card(props) {
         
         </div>
 
-        </div>
+    
     );
 }
 

@@ -1,0 +1,16 @@
+.button{
+    width: 70px;
+    height: 40px;
+}
+
+.red{
+    background-color: rgb(180, 12, 12);
+}
+
+.green{
+    background-color: rgb(18, 163, 18);
+}
+
+.yellow{
+    background-color: rgb(255, 255, 95);
+}
