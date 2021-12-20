@@ -11,8 +11,8 @@ function App() {
       </header>
       <div className="cards">
       {
-       tarifs.map((card)=>
-       <Card tarif={card.tarif} price={card.price} volume={card.volume} extra={card.extra} isSelected={card.isSelected} ></Card>
+       tarifs.map((card, index)=>
+       <Card key={index} tarif={card.tarif} price={card.price} volume={card.volume} extra={card.extra} isSelected={card.isSelected} ></Card>
        )
       }
       </div>
