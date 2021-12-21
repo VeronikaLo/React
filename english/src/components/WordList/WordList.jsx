@@ -1,5 +1,5 @@
 import './WordList.css';
-import {wordList} from '../DataList';
+import {wordList} from '../dataList.js';
 import Row from '../Row/Row';
 
 
