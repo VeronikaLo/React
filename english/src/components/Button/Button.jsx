@@ -5,8 +5,8 @@ function Button (props){
     const {text,color} =props;
     
    return(
-       <div className={"button" + color}>
-        <button>{text}</button>
+       <div>
+        <button className={"button " + color }>{text}</button>
         </div>
 
    )

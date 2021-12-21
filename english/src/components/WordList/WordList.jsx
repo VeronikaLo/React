@@ -1,47 +1,38 @@
+import './WordList.css';
+import {wordList} from '../DataList';
+import Row from '../Row/Row';
 
 
-const wordList=[
-    {
-        word:"key",
-        meaning: "1.each of several buttons on a panel for operating a computer, typewriter, or telephone.   2.a small piece of shaped metal with incisions cut to fit the wards of a particular lock, which is inserted into a lock and turned to open or close it.",
-        transcription: "/kiː/",
-        translation:"1. клавиша на клавиатуре, телефоне  2. ключ",
-        theme:"computer, IT"
-    },
+function WordList (props){
 
-    {
-        word:"data processing",
-        meaning:"the process of putting information into a computer so that the computer can organize it, change its form, etc.; to retrieve, transform, or classify information.",
-        transcription:"/ˈdeɪtə ˈprəʊsesɪŋ/",
-        translation:"обработка данных",
-        theme:"computer, IT"
-    },
+    //const {word, meaning, transcription, translation, theme} =props;
     
+   return(
+    <div className="ListWrapper">
+        <table className="table">
+            <thead className="thead">
+            <tr>
+            <th>word</th>
+            <th>transcription</th>
+            <th>meaning</th>
+            <th>translation</th>
+            <th>theme</th>
+            <th>actions</th>
+            </tr>
+            </thead>
 
-    {
-        word:"access",
-        meaning:"If you have access to information, you have the opportunity or right to do something or use it.",
-        transcription:"/ˈækses/",
-        translation:"доступ",
-        theme:"computer, IT"
-    },
-    
+            <tbody className="tbody">
+            {
+       wordList.map((row, index)=>
+       <Row key={index} word={row.word} transcription={row.transcription} meaning={row.meaning} translation={row.translation} theme={row.theme} isSelected={row.isSelected}></Row>
+       )
+      }
 
-    {
-        word:"install",
-        meaning:"If you install a program, you put it onto a computer or mobile phone so that you can use it.",
-        transcription:"/ɪnstɔːl/",
-        translation:"устанавливать",
-        theme: "computer, IT"
-    },
-    
 
-    {
-        word:"restore",
-        meaning:"to return (a program) to its original or former condition",
-        transcription:"/rɪˈstɔː/",
-        translation:"",
-        theme: "computer, IT"
-    },
-    
-]
+            </tbody>
+        </table>
+    </div>
+   )
+}
+
+export default WordList;

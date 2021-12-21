@@ -1,0 +1,27 @@
+.tbody tr:nth-child(odd) {
+    background-color: rgb(253, 249, 211);
+}
+
+.action{
+    display: flex;
+}
+
+.btnRow{
+    margin:2px 2px ;
+}
+
+.btnRow:hover {
+    box-shadow: 2px 4px 2px grey;
+    cursor: pointer;
+}
+
+.selected td {
+    background-color: rgb(102, 161, 238);
+    border: 2px solid rgb(85, 150, 236);
+    box-shadow: 2px 4px 2px grey;
+    text-shadow: 1px  2px 1px grey;
+    padding:5px;
+    color:white;
+    font-size: 18px;
+
+}

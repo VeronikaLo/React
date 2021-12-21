@@ -1,6 +1,7 @@
 
 import './App.css';
 import Card from './components/Card/Card'
+import WordList from './components/WordList/WordList'
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
         <h1>English words</h1>
       </header>
 
-      <Card></Card>
+      <WordList></WordList>
     </div>
   );
 }
