@@ -10,9 +10,9 @@ function App() {
       </header>
       <div className="cards">
       {
-       tarifs.map((card, index)=>
-       <Card key={index} tarif={card.tarif} price={card.price} volume={card.volume} extra={card.extra} ></Card>
-       )
+      tarifs.map((card,index)=>
+      <Card key={index} tarif={card.tarif} price={card.price} volume={card.volume} extra={card.extra} ></Card>
+      )
       }
       </div>
 

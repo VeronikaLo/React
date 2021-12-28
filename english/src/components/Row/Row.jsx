@@ -11,6 +11,10 @@ function Row (props){
     if (isSelected) selected = "selected";
    return(
     <>
+   
+   
+
+
     <tr className={selected}>
                 <td>{word}</td>
                 <td>{transcription}</td>
