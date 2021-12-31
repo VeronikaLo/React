@@ -3,17 +3,18 @@ import Card from './components/Card';
 import {tarifs} from './components/Data';
 
 function App() {
+
+  const element = tarifs.map((card, i)=>
+  <Card key={i} {...card} />
+)
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Наши Тарифы</h1>
       </header>
       <div className="cards">
-      {
-      tarifs.map((card,index)=>
-      <Card key={index} tarif={card.tarif} price={card.price} volume={card.volume} extra={card.extra} ></Card>
-      )
-      }
+          {element}
       </div>
 
     </div>
