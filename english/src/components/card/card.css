@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 50px 0;
 }
 
 
@@ -14,7 +15,7 @@
     border-radius: 20px;
     box-shadow: 2px  2px 3px rgb(184, 181, 181);
     padding:0;
-    margin: 20px, 0;
+    margin: 50px, 0;
 }
 
 
@@ -22,7 +23,7 @@
     height: 50px;
     align-self: start ;
     width:100%;
-    background-color: rgb(146, 240, 230);
+    background-color: #88E0EF;
     border-radius: 20px 20px 0px 0px;
    
 }
@@ -38,6 +39,28 @@
 
 .card__body p{
     margin: 8px 0;
+}
+
+
+.card-btn{
+    width: 120px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    background-color: #88E0EF;
+    border:none;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.card-btn:hover{
+    box-shadow: 2px 5px 4px grey;
+}
+
+.translation {
+    padding-top: 50px;
+    font-size: 25px;
 }
 
 .buttons{
