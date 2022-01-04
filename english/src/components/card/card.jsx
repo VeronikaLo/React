@@ -19,7 +19,7 @@ function Card (props){
             <div className="card__header"></div>
             <div className="card__body">
                 <h2>{word}Apple</h2>
-                <p>|ˈæp(ə)l| </p>
+                <p>/ ˈæp(ə)l / </p>
                 {isPressed? <p className='translation' >яблоко</p> :
                  <button className='card-btn' onClick={handleChange} >Check</button>} 
                 
