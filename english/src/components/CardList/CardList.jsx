@@ -17,13 +17,23 @@ function CardList (){
         setCurrentIndex(currentIndex - 1);
     }
 
+
    return(
-       <div className="cardListWrapper">
-            <button className='btn_cardList' onClick={onBack}>{"<"}</button>
+        <>
+        <div className="cardListWrapper">
+            {currentIndex > 0 && <button className='btn_cardList' onClick={onBack}>{"<"}</button>}
+
             <Card {...wordList[currentIndex]}/>
-            <button className='btn_cardList' onClick={onNext}>{">"}</button>
-       </div>
-   )
+
+            {currentIndex < wordList.length-1 && <button className='btn_cardList' onClick={onNext}>{">"}</button>}
+        </div>
+
+        <div className='info'>
+        {currentIndex + 1} / {wordList.length}
+            </div>
+        </>
+        )
+    
 }
 
 export default CardList;

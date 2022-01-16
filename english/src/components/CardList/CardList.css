@@ -19,3 +19,9 @@
 .btn_cardList:hover{
     box-shadow: 2px 5px 4px grey;
 }
+
+.info{
+    font-size: 20px;
+    font-weight: 800;
+    color:#88E0EF;;
+}

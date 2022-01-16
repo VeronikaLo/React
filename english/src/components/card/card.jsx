@@ -29,11 +29,12 @@ function Card (props){
             
         </div>
 
-        {/*<div className="buttons">
-            <Button text="I know" color="green"></Button>
+        <div className="buttons">
+            {/*<Button text="I know" color="green"></Button>
             <Button text="I don't know" color="red" ></Button>
-            <Button text="Skipp" color="blue"></Button>
-    </div>*/}
+            <Button text="Skipp" color="blue"></Button>*/}
+            
+    </div>
 
         </div>
     )
