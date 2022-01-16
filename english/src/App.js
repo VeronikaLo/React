@@ -1,18 +1,19 @@
 
 import './App.css';
 import Header from './components/Header/Header';
-import Card from './components/Card/Card';
+import CardList from './components/CardList/CardList';
 import WordList from './components/WordList/WordList';
 
 
-function App() {
+
+function App({wordlist}) {
   return (
     <div className="App">
-      <Header></Header>
+    <Header/>
     
     <WordList/>
 
-      <Card/>
+    <CardList/>
       
       
     </div>

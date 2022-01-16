@@ -8,26 +8,34 @@ import cans from '../assets/cancel.png';
 
 function Row (props){
 
-    const {word, transcription, translation, theme,} = props;
+    const {word, transcription, translation, theme, id} = props;
 
     //State
     const [editedMode, setEdited] = useState(false);
-    const [input, commitInput ] = useState({word:word,transcription:transcription, translation:translation, theme:theme});
+    const [input, commitInput ] = useState({word, transcription, translation, theme,id});
     
     
-    // editing Mode on/off
+    
     const handleEditing = () => {
         setEdited(!editedMode);
     };
 
-    
-    //
-    /*1.способ: прописываем все импутs по отдельности:
+    const handleCancel = () => {
+        commitInput({word, transcription, translation, theme,id});
+        setEdited(!editedMode);
+    };
+
+    // Editing imputs
+    /* 1.способ: прописываем все импутs по отдельности:
+ 
 
     const handleWordChange = (e) => {
         commitInput({
-            ...input,
-            word:e.target.value
+            word:e.target.value,
+            transkription: input.transcription,
+            translation: input.translation,
+            theme: input.theme
+
         });  
     }; 
 
@@ -52,15 +60,15 @@ function Row (props){
         });  
     };
 
-    */
+*/
 
 
     // 2.способ : прописываем 1 функцию для всех импутов, добaвляем атрибут name    
     const handleChange = (e) => {
         const { name, value } = e.target;
-        commitInput((previousState) => {
+        commitInput((prevState) => {
             return {
-            ...previousState,
+            ...prevState,
             [name]: value,
             };
         });
@@ -72,13 +80,13 @@ function Row (props){
     <>
    
     <tr className={editedMode? "edited": ""}>
-                <td>{editedMode? <input className='input' name = "word"  value={input.word} onChange={handleChange} />: word}</td>
-                <td>{editedMode? <input className='input' name = "transcription" value={input.transcription} onChange={handleChange}/>: transcription}</td>
-                <td>{editedMode? <input className='input' name = "translation" value={input.translation} onChange={handleChange}/>: translation}</td>
-                <td>{editedMode? <input className='input' name = "theme" value={input.theme} onChange={handleChange}/>: theme}</td>
+                <td>{editedMode? <input className='input' name = "word"  value={input.word} onChange={handleChange} />: input.word}</td>
+                <td>{editedMode? <input className='input' name = "transcription" value={input.transcription} onChange={handleChange}/>: input.transcription}</td>
+                <td>{editedMode? <input className='input' name = "translation" value={input.translation} onChange={handleChange}/>: input.translation}</td>
+                <td>{editedMode? <input className='input' name = "theme" value={input.theme} onChange={handleChange}/>: input.theme}</td>
                 <td className="actions">
                 { editedMode?<button className="btnRow" onClick={handleEditing}><img src= {sav} alt="" /></button>: <button className="btnRow"><img src= {del} alt="" /></button>}
-                { editedMode?<button className="btnRow" onClick={handleEditing} ><img src= {cans} alt="" /></button>: <button className="btnRow" onClick={handleEditing}><img src= {pen} alt="" /></button>}       
+                { editedMode?<button className="btnRow" onClick={handleCancel} ><img src= {cans} alt="" /></button>: <button className="btnRow" onClick={handleEditing}><img src= {pen} alt="" /></button>}       
                 
                 </td>
     </tr>

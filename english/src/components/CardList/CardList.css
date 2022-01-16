@@ -1,0 +1,21 @@
+.cardListWrapper{
+    display: flex;
+    align-items: center;
+}
+
+.btn_cardList{
+    height: 50px;
+    width: 60px;
+    margin: 0 20px;
+    background-color: #88E0EF;
+    border:none;
+    border-radius: 20px;
+    cursor: pointer;
+    color:white;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.btn_cardList:hover{
+    box-shadow: 2px 5px 4px grey;
+}

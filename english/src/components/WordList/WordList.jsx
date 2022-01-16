@@ -3,7 +3,7 @@ import {wordList} from '../dataList.js';
 import Row from '../Row/Row';
 
 
-function WordList (props){
+function WordList (){
 
     
    return(
