@@ -1,18 +1,26 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Card.css';
 import Button from '../Button/Button';
 
 
 function Card (props){
 
-     const {word, transcription, translation,} =props;
+     const {word, transcription, translation, id} =props;
 
      const [isPressed, setPressed] = useState(false);
     
     const handleChange = () => {
         setPressed(!isPressed);
     };
-     
+    
+    // если меняется id
+  // значит мы рисуем новую карточку
+  // значит на всякий случай сбрасываем
+  // состояние к начальному
+    useEffect(() => {
+        setPressed(false);
+    }, [id]);
+
     return(
         <div className="cardWrapper">
         <div className="card">
