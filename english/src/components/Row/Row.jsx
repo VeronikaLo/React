@@ -75,25 +75,44 @@ function Row (props){
     }
 
 
-   return(
 
-    <>
-   
-    <tr className={editedMode? "edited": ""}>
-                <td>{editedMode? <input className='input' name = "word"  value={input.word} onChange={handleChange} />: input.word}</td>
-                <td>{editedMode? <input className='input' name = "transcription" value={input.transcription} onChange={handleChange}/>: input.transcription}</td>
-                <td>{editedMode? <input className='input' name = "translation" value={input.translation} onChange={handleChange}/>: input.translation}</td>
-                <td>{editedMode? <input className='input' name = "theme" value={input.theme} onChange={handleChange}/>: input.theme}</td>
-                <td className="actions">
-                { editedMode?<button className="btnRow" onClick={handleEditing}><img src= {sav} alt="" /></button>: <button className="btnRow"><img src= {del} alt="" /></button>}
-                { editedMode?<button className="btnRow" onClick={handleCancel} ><img src= {cans} alt="" /></button>: <button className="btnRow" onClick={handleEditing}><img src= {pen} alt="" /></button>}       
+
+    if(editedMode){
+        return(
+            <>
+                <tr className= "edited">
+                    <td> <input className='input' name = "word"  value={input.word} onChange={handleChange} /></td>
+                    <td> <input className='input' name = "transcription" value={input.transcription} onChange={handleChange}/></td>
+                    <td><input className='input' name = "translation" value={input.translation} onChange={handleChange}/></td>
+                    <td><input className='input' name = "theme" value={input.theme} onChange={handleChange}/></td>
+                    <td className="actions">
+                    <button className="btnRow" onClick={handleEditing}><img src= {sav} alt="" /></button>
+                    <button className="btnRow" onClick={handleCancel} ><img src= {cans} alt="" /></button>       
+                    </td>
+                </tr>
+            </>
+        )
+    }
+
+    else {
+        return(
+            <>
+                <tr >
+                    <td>{ input.word }</td>
+                    <td>{ input.transcription }</td>
+                    <td>{ input.translation }</td>
+                    <td>{ input.theme }</td>
+                    <td className="actions">
+                    <button className="btnRow"><img src= {del} alt="" /></button>
+                    <button className="btnRow" onClick={handleEditing}><img src= {pen} alt="" /></button>       
+                    </td>
+                </tr>
+            </>
                 
-                </td>
-    </tr>
-    </>
-        
-    
-   )
+            
+        )
+    }
+
 }
 
 export default Row;

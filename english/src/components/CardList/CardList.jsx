@@ -11,10 +11,10 @@ function CardList (){
     const [currentIndex, setCurrentIndex] = useState(0);
     
     const onNext = ()=>{
-        setCurrentIndex(currentIndex + 1);
+        setCurrentIndex(prevCurrentIndex => prevCurrentIndex + 1);
     }
     const onBack = ()=>{
-        setCurrentIndex(currentIndex - 1);
+        setCurrentIndex(prevCurrentIndex => prevCurrentIndex - 1);
     }
 
 
