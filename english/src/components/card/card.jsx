@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './Card.css';
-import Button from '../Button/Button';
+//import Button from '../Button/Button';
 
 
 function Card (props){

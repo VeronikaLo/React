@@ -7,6 +7,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import CardList from './components/CardList/CardList';
 import WordList from './components/WordList/WordList';
+import NewCard from './components/NewCard/NewCard';
 
 
 
@@ -26,9 +27,8 @@ function App({wordlist}) {
           Still in process
         </Route>
 
-        <Route path="/Add a card">
-          Still in process
-        </Route>
+        <Route path="/Card" element={<NewCard/>}/>
+          
       </Routes>
       
       </div>
