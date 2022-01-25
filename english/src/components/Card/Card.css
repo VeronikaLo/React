@@ -55,7 +55,14 @@
 }
 
 .card-btn:hover{
-    box-shadow: 2px 5px 4px grey;
+    box-shadow: 2px 7px 4px grey;
+    background-color: #49d7f0;
+}
+
+.card-btn:focus{
+    box-shadow: 2px 7px 4px grey;
+    background-color: #49d7f0;
+    outline: none;
 }
 
 .translation {

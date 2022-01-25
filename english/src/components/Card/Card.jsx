@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import './Card.css';
 //import Button from '../Button/Button';
 
@@ -8,6 +8,11 @@ function Card (props){
      const {word, transcription, translation, id} =props;
 
      const [isPressed, setPressed] = useState(false);
+
+     const ref = useRef(null);
+     useEffect(() => ref.current.focus()
+      );
+
     
     const handleChange = () => {
         setPressed(!isPressed);
@@ -29,7 +34,7 @@ function Card (props){
                 <h2>{word}</h2>
                 <p> {transcription}  </p>
                 {isPressed? <p className='translation' > {translation}</p> :
-                 <button className='card-btn' onClick={handleChange} >Check</button>} 
+                 <button className='card-btn' onClick={handleChange} ref={ref} >Check</button>} 
                 
 
             </div>

@@ -51,6 +51,9 @@
     outline-color: #88E0EF;
 }
 
+.new-input:focus{
+    outline-color: #88E0EF;
+}
 
 .buttons{
     display: flex;
