@@ -5,20 +5,21 @@ import './Card.css';
 
 function Card (props){
 
-     const {word, transcription, translation, id} =props;
+     const {word, transcription, translation, id, addCheckedWords} =props;
 
-     const [isPressed, setPressed] = useState(false);
+    const [isPressed, setPressed] = useState(false);
 
-     const ref = useRef(null);
-     useEffect(() => {
-         if(ref.current){
-             ref.current.focus();
-         }
-        });
+    const ref = useRef(null);
+    useEffect(() => {
+        if(ref.current){
+            ref.current.focus();
+        }
+    });
 
     
     const handleChange = () => {
         setPressed(!isPressed);
+        addCheckedWords();
     };
     
     // если меняется id
@@ -37,7 +38,7 @@ function Card (props){
                 <h2>{word}</h2>
                 <p> {transcription}  </p>
                 {isPressed? <p className='translation' > {translation}</p> :
-                 <button className='card-btn' onClick={handleChange} ref={ref} >Check</button>} 
+                <button className='card-btn' onClick={handleChange} ref={ref} >Check</button>} 
                 
 
             </div>
