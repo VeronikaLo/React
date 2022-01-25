@@ -10,8 +10,11 @@ function Card (props){
      const [isPressed, setPressed] = useState(false);
 
      const ref = useRef(null);
-     useEffect(() => ref.current.focus()
-      );
+     useEffect(() => {
+         if(ref.current){
+             ref.current.focus();
+         }
+        });
 
     
     const handleChange = () => {
